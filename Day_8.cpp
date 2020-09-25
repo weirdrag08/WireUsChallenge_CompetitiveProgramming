@@ -31,16 +31,18 @@ int main()
     {
         cin >> output[i];
     }
-    cout << "The occurence of the queries in the input string: " << endl;
+//     cout << "The occurence of the queries in the input string: " << endl;
     for (int i = 0; i < queries_size; i++)
     {
         if (my_map.count(output[i]) > 0)
         {
-            cout << output[i] << ": " << my_map[output[i]] << endl;
+//             cout << output[i] << ": " << my_map[output[i]] << endl;
+               cout << my_map[output[i]] <<endl;
         }
         else
         {
-            cout << output[i] << ": 0" << endl;
+//             cout << output[i] << ": 0" << endl;
+               cout << "0" << endl;
         }
     }
 }
