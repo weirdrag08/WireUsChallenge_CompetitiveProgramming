@@ -1,20 +1,18 @@
 #include<iostream>
-#include<string>
+#include<math.h>
 using namespace std;
 
-int convert(string str){
-    if(str.length()==1){
-        return str[0]-'0';
+int string_to_int(string s){
+    if(s.size() == 1){
+        return s[0] - '0';
     }
-    int smallnum=str[str.length()-1]-'0';
-    int num=convert(str.substr(0,str.length()-1));
-    num=num*10+ smallnum;
-    return num;
+    int digit_sum = ((s[0] - '0') * pow(10, (s.size() - 1)));
+    return digit_sum + string_to_int(s.substr(1));
 }
+
 int main(){
-    string str;
-    cin>>str;
-    int output=convert(str);
-    cout<<output<<endl;
-    return 0;
+    string s;
+    cin >> s;
+    int number = string_to_int(s);
+    cout << number << endl;
 }
