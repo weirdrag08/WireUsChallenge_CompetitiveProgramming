@@ -34,10 +34,11 @@ int match_finder(string input, string match){
 
 int main(){
     string input = "", match = "";
-    cout << "Enter a string: " << endl;
+   // cout << "Enter a string: " << endl;
     cin >> input;
-    cout << "Enter the string for which you want to find it in the original string: " << endl;
+  //  cout << "Enter the string for which you want to find it in the original string: " << endl;
     cin >> match;
     int index = match_finder(input, match);
-    cout << "The index where the resemblance started: " << index << endl;
+   // cout << "The index where the resemblance started: " << index << endl;
+    cout << index << endl;
 }
